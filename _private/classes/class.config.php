@@ -18,7 +18,7 @@ class config
 			{
 				$this->theme = 'default';
 				$this->domain = 'http://www.electronicdictionary.org.uk';
-				$this->domain = 'http://test.electronicdictionaries.co.uk';
+				//$this->domain = 'http://test.electronicdictionaries.co.uk';
 				$this->name = 'Electronic Dictionaries';
 				$this->title = 'The Electronic Dictionary Shop | Electronic Dictionaries - Free Delivery';
 				$this->cats = array(511 => 'Electronic Crosswords',
@@ -28,7 +28,7 @@ class config
 
 				$this->menu = array("Electronic Dictionaries", "About", "Contact Us", "Delivery & Returns", "Why Buy From Us");
 				break;
-				
+
 			}
 		}
 
