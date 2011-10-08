@@ -49,7 +49,7 @@ class quickshop extends config
 	{
 
 		$conn = new Mongo('localhost');
-		$mdb = $conn->test;
+		$mdb = $conn->quickshop;
 		$collection = $mdb->atsproducts;
 
 		$this->urls = array();
