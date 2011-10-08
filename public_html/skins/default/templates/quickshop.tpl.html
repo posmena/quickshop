@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{$shop.title}</title>
+	<link rel="stylesheet" type="text/css" href="/style.css" media="screen, projection" />
+	<script src="/min/?g=sitebuilderjs&amp;1274021140"></script>
+	<!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<div class="header">
+		<h1>{$shop.name}</h1>
+		<div class="menu">
+			<ul>
+			{assign var="counter" value=0}
+			{foreach from=$pages item="page"}
+				<li><a href="{$domain}/{$page.slug}{if $counter gt 0}.html{/if}">{$page.text}</a></li>
+				{assign var="counter" value=$counter+1}
+			{/foreach}
+			</ul>
+		</div>
+	</div>
+
+	<div class="body clearfix">
+	<div class="content">
+			{include file=$content}
+		</div>
+		<div class="navigation">
+			<div class="group">
+				<span class="heading">Categories</span>
+				<ul>
+					{foreach from=$categories item="category"}
+					<li><a href="{$domain}/{$category.slug}.html">{$category.text}</a></li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="footer">
+		&copy; Electronic Dictionaries 2011
+	</div>
+	
+</div>
+
+</body>
+
+
+</html>

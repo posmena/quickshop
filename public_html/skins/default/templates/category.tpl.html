@@ -1,0 +1,24 @@
+
+{if $categoryTop != ''}
+<div class="category_header">
+	{include file=$categoryTop}
+</div>
+{/if}
+
+
+<div class="category clearfix">
+{foreach from=$products item="product"}
+<div class="product">
+	<a href="{$domain}/{$product.slug}/{$product.ProductID}.html">{$product.Name}</a>
+	<img src="{$product.SmallImage}" />
+	<br />
+	<a href="{$domain}/cart/add/{$product.ProductID}">Add To Cart</a><br />
+</div>
+{/foreach}
+{if $categoryBottom != ''}
+<div class="category_footer">
+	{include file=$categoryBottom}
+</div>
+{/if}
+</div>
+

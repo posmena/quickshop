@@ -1,0 +1,66 @@
+{literal}
+<MainOrArchivePage>
+
+<style type="text/css">
+#post {
+	/*padding-top: 6px;*/
+}
+#middle {
+	font-size: 14px;
+	width: 295px;
+}
+
+#rightbar {
+	width: 310px;
+}
+
+#youtube {
+	display: none;
+}
+
+.readmore {
+	display: block;
+}
+
+.chopdown {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+</style>
+
+<div id="leftbar" class="float_left margin">
+	<div class="portlet padout">
+		{/literal}
+		{include file="../../global/topshop_lite.tpl.html"}
+		{literal}
+	</div>
+</div>
+</MainOrArchivePage>
+
+<div id="middle" class="float_left margin">
+	<Blogger>
+	  <!-- Begin .post -->
+	  <div id="post" class="chopdown portlet padout">
+		<span class="readmore"><a href="<$BlogItemPermalinkUrl$>">... [more]</a></span>
+		<a name="<$BlogItemNumber$>"></a>
+			 Welcome To Our Shop!
+		<h3 class="post-title">
+		 <BlogItemUrl><a href="<$BlogItemUrl$>" title="external link"></BlogItemUrl>
+		 <a href="<$BlogItemPermalinkUrl$>"><$BlogItemTitle$></a>
+		 <BlogItemUrl></a></BlogItemUrl>
+		</h3>
+		</BlogItemTitle>
+
+				 <div class="post-body">
+		<div>
+			Browse the site, check out our products!
+		</div>
+		</div>
+		
+	  </div>
+	  <!-- End .post -->
+	</Blogger>
+</div>
+{/literal}

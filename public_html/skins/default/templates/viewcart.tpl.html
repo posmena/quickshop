@@ -1,0 +1,53 @@
+View cart:
+
+<div class="cart">
+	{if $cart.items|@count gt 0}
+	<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+	   <th>ID</th>
+	   <th width="300">Name</th>
+	   <th>Qty.</th>
+	   <th>@Price</th>
+	   <th>Total</th>
+	</tr>
+	{assign var="items" value=""}
+	{foreach from=$cart.items item="item"}
+		<tr>
+			<td><a href="{$domain}/cart/remove/{$item.id}">[x]</a></td>
+			<td>{$item.id}</td>
+			<td><a href="{$domain}/{$item.slug}/{$item.id}.html">{$item.name}</a></td>
+			<td>{$item.qty}</td>
+			<td>{$item.price}</td>
+			<td>{$item.itemtotal}</td>
+		</tr>
+	{/foreach}
+	<tr>
+		<td colspan="4">&nbsp;</td>
+		<td>{$cart.total}</td>
+	</tr>
+	</table>
+	<div style="float: right">
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
+		<!-- Identify your business so that you can collect the payments. --> 
+		<input type="hidden" name="business" value="sales@posmena.co.uk"> 
+		<!-- Specify a Buy Now button. --> 
+		<input type="hidden" name="cmd" value="_xclick"> 
+		<!-- Specify details about the item that buyers will purchase. --> 
+		<input type="hidden" name="item_name" value="{$item.name}: {$cart.paypalitem}"> 
+		<input type="hidden" name="amount" value="0.01"> 
+		<input type="hidden" name="currency_code" value="GBP"> 
+		<input type="hidden" name="return" value="http://electronicdictionary.org.uk/"> 
+
+		<!-- Display the payment button. --> 
+		<input type="image" name="submit" border="0" 
+		src="https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif" 
+		alt="PayPal - The safer, easier way to pay online"> 
+		<img alt="" border="0" width="1" height="1" 
+		src="https://www.paypal.com/en_US/i/scr/pixel.gif" > 
+		</form> 
+	</div>
+	{else}
+		Your cart is empty! 
+	{/if}
+</div>

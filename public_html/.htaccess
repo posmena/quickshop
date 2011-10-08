@@ -1,0 +1,83 @@
+#start .htaccess code
+Options -Indexes +FollowSymLinks
+
+##block cuil
+Order Deny,Allow
+Deny from 38.99.13.121
+Deny from 38.99.44.101
+Deny from 64.1.215.166
+Deny from 208.36.144.6
+Deny from 38.99.13.122
+Deny from 38.99.44.102
+Deny from 64.1.215.162
+Deny from 208.36.144.7
+Deny from 38.99.13.123
+Deny from 38.99.44.103
+Deny from 64.1.215.163
+Deny from 208.36.144.8
+Deny from 38.99.13.124
+Deny from 38.99.44.104
+Deny from 64.1.215.164
+Deny from 208.36.144.9
+Deny from 38.99.13.125
+Deny from 38.99.44.105
+Deny from 64.1.215.165
+Deny from 208.36.144.10
+Deny from 38.99.13.126
+Deny from 38.99.44.106
+Deny from 66.249.71.203
+Deny from .cuill.com
+Deny from cuill.com
+Deny from ukspider1.wise-guys.nl
+Deny from .ukspider1.wise-guys.nl
+Deny from .wise-guys.nl
+Deny from wise-guys.nl
+Deny from .ru
+
+<FilesMatch "\.(jpg|jpeg|gif|png|swf|css)$">
+   Header set Cache-Control "max-age=31556926"
+</FilesMatch>
+
+<FilesMatch "\.(htm|html|css|js|php)$">
+   AddDefaultCharset UTF-8
+   DefaultLanguage en-GB
+</FilesMatch>
+
+RewriteEngine On
+RewriteBase /
+
+
+
+	ReWriteRule ^jquery$ http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js [P]
+
+	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+#	RewriteRule ^login.html$ index.php?loc=login [QSA]	
+	#RewriteRule ^affiliates-management.html$ index.php?loc=opm [QSA]
+	#RewriteRule ^banner-design.html$ index.php?loc=banners [QSA]
+	#RewriteRule ^product-feeds.html$ index.php?loc=feeds [QSA]
+	#RewriteRule ^contact-us.html$ index.php?loc=contact [QSA]
+	#RewriteRule ^widgets.html$ index.php?loc=widgets [QSA]
+      
+RewriteRule ^([cart]+/[add]+/([a-z0-9])+)$ index.php?action=addtocart&productid=$1 [QSA]
+RewriteRule ^([cart]+/[remove]+/([a-z0-9])+)$ index.php?action=removefromcart&productid=$1 [QSA]
+RewriteRule ^([cart]+/[view]+)$ index.php?action=viewcart [QSA]
+RewriteRule ^([a-z0-9\.\-\_]+).html$ index.php?slug=$1 [QSA]
+RewriteRule ^[a-z0-9\.\-\_]+/([a-z0-9])+.html$ index.php?action=productpresentation&productid=$0 [QSA]
+
+
+
+#RewriteRule ^([clients]+/([a-z0-9])+/([a-z0-9]+))$ index.php?loc=clients_$3&clientid=$2 [QSA]
+
+#RewriteRule ^([clients]+/([a-z0-9])+/([a-z0-9]+)+/([0-9])+)$ index.php?loc=clients_$3&clientid=$2&feedid=$4 [QSA]
+#RewriteRule ^([clients]+/([a-z0-9])+/([a-z0-9]+)+/([apidemo])+/([properties])+/([a-z0-9])+)$ index.php?loc=clients_$3&clientid=$2&feedid=$4 [QSA]
+
+#RewriteRule ^logout.html$ index.php?loc=logout [QSA]
+
+
+
+#thanks to http://www.evolt.org/ultimate_htaccess_examples
+
+SetEnv SERVER_ADMIN sales@posmena.co.uk
+ServerSignature Off
+DefaultLanguage en-GB

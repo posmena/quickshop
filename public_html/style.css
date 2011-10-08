@@ -1,0 +1,240 @@
+/* Imports */
+@import url("reset.css");
+
+
+/***** Global *****/
+/* Body */
+body {
+	background: #ffffff;
+	color: #000305;
+	font-size: 87.5%; /* Base font size: 14px */
+	font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	line-height: 1.429;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+table tr td
+{
+	vertical-align: top;
+	}
+/* Headings */
+h2 {font-size: 1.571em}	/* 22px */
+h3 {font-size: 1.429em}	/* 20px */
+h4 {font-size: 1.286em}	/* 18px */
+h5 {font-size: 1.143em}	/* 16px */
+h6 {font-size: 1em}		/* 14px */
+
+h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1.1;
+	margin-bottom: .8em;
+}
+	
+/* Anchors */
+a {outline: 0;}
+a img {border: 0px; text-decoration: none;}
+a:link, a:visited {
+	color: #ffffff;
+	padding: 0 1px;
+	text-decoration: none;
+}
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+ /* Holly Hack Targets IE Win only \*/
+	 * html .clearfix {height: 1%;}
+	.clearfix {display: block;}
+/* End Holly Hack */
+	
+/* Paragraphs */
+p {margin-bottom: 1.143em;}
+* p:last-child {margin-bottom: 0;}
+
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+
+::-moz-selection {background: #F6CF74; color: #fff;}
+::selection {background: #F6CF74; color: #fff;}
+
+/* Lists */
+ul {
+	list-style: outside disc;
+	margin: 1em 0 1.5em 1.5em;
+}
+
+ol {
+	list-style: outside decimal;
+	margin: 1em 0 1.5em 1.5em;
+}
+
+dl {margin: 0 0 1.5em 0;}
+dt {font-weight: bold;}
+dd {margin-left: 1.5em;}
+
+/* Quotes */
+blockquote {font-style: italic;}
+cite {}
+
+q {}
+
+/* Tables */
+table {margin: .5em auto 1.5em auto; width: 98%;}
+	
+	/* Thead */
+	thead th {padding: .5em .4em; text-align: left;}
+	thead td {}
+
+	/* Tbody */
+	tbody td {padding: .5em .4em;}
+	tbody th {}
+	
+	tbody .alt td {}
+	tbody .alt th {}
+	
+	/* Tfoot */
+	tfoot th {}
+	tfoot td {}
+	
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
+/***** Layout *****/
+.body {clear: both; margin: 0 auto; width: 960px;}
+img.right figure.right {float: right; margin: 0 0 2em 2em;}
+img.left, figure.left {float: right; margin: 0 0 2em 2em;}
+
+
+
+#wrapper {
+	width: 975px;
+	margin: auto;
+	background-color: #ffffff;
+	-moz-box-shadow: 0 0 5px 5px #f1f1f1;
+-webkit-box-shadow: 0 0 5px 5px #f1f1f1;
+box-shadow: 0 0 5px 5px #f1f1f1;
+}
+
+.header {
+	height: 120px;
+	border: 0px solid transparent;
+	float: left;
+	width: 100%;
+}
+
+.header h1 {
+	float: left;
+	font-size: 36px;
+}
+
+.header .menu {
+	margin-top: 90px;
+	height: 30px;
+	background-color: #0067CD;
+	color: #ffffff;
+}
+
+.header .menu ul{
+	list-style-type: none;
+	display: inline;
+}
+
+.header .menu ul li {
+	padding-top: 5px;
+	float: left;
+	margin-left: 25px;
+	height: 25px;
+	overflow: hidden;
+}
+
+.header .menu ul li a {
+	padding: 8px;
+	margin: 0px;
+}
+
+.header .menu ul li a:hover {
+	background-color: #1A76D2;
+}
+
+.body {
+	
+}
+
+.body .navigation {
+	width: 200px;
+	float: left;
+	border-right: 1px solid #e6e6e6;
+}
+
+.body .navigation .group {
+	margin-top: 10px;
+}
+
+.body .navigation .group .heading {
+	display: block;
+	padding: 5px;
+}
+
+.body .navigation .group ul{
+	list-style-type: none;
+}
+
+.body .navigation .group ul li a {
+	color: #000000;
+}
+
+.body .content {
+	float: right;
+	width: 740px;
+	padding-top: 20px;
+}
+
+.body .content .category {
+	padding-top: 20px;
+}
+
+.body .content .category .product {
+	border: 1px solid #333333;
+	float: left;
+	margin-right: 20px;
+	width: 150px;
+	height: 250px;
+}
+
+.body .content .category .product a {
+	color: #000000;
+}
+
+.body .content .category .product a:hover {
+
+}
+
+.body .content .product a {
+	color: #000000;
+}
+
+.body .content .cart a {
+	color: #000000;
+}
+
+.footer {
+	border-top: 1px solid #e6e6e6;
+	padding: 5px;
+	
+}

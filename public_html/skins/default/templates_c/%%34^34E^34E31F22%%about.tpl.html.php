@@ -1,0 +1,11 @@
+<?php /* Smarty version 2.6.9, created on 2011-10-08 23:51:38
+         compiled from pages/about.tpl.html */ ?>
+Welcome to ElectronicDictionary.org.uk. We believe that this site is the number 1 UK resource for electronic pocket reference products including dictionaries, thesauruses, encyclopedias and crossword solvers.
+<br /><br />
+We maintain a very wide product range from recognised brands such as Franklin, Seiko and Sharps so you have the opportunity to buy the best products on the market directly from us, and at great prices. Whether you need a budget pocket reference product or would like to treat yourself to a high end model, we are sure to have exactly what you are looking for. 
+<br /><br />
+ElectronicDictionary.org.uk is run by Frozen Fire Media, an established online retail company who have access to a wide range of electronic products. After years in the industry, we know what a customer expects when shopping online - great prices, great service and fast delivery. Our aim is to meet these needs for everyone who chooses to shop with us. 
+<br /><br />
+We know that privacy and security are two very important considerations whenever shopping online. For this reason, we have partnered with PayPal who will be handling all of our payment processing. Their secure servers ensure your details are protected throughout each and every stage of the checkout process. 
+<br /><br />
+Finally, we believe that there are many benefits to shopping with us. To see them in full, simply visit the Why Buy From Us page.
