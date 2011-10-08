@@ -28,6 +28,7 @@ class config
 
 				$this->menu = array("Electronic Dictionaries", "About", "Contact Us", "Delivery & Returns", "Why Buy From Us");
 				break;
+				
 			}
 		}
 
