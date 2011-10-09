@@ -65,7 +65,7 @@ RewriteRule ^([cart]+/[view]+)$ index.php?action=viewcart [QSA]
 RewriteRule ^([a-z0-9\.\-\_]+).html$ index.php?slug=$1 [QSA]
 RewriteRule ^[a-z0-9\.\-\_]+/([a-z0-9])+.html$ index.php?action=productpresentation&productid=$0 [QSA]
 
-
+RewriteRule ^(sitemap.xml)$ index.php?action=sitemap [QSA]
 
 #RewriteRule ^([clients]+/([a-z0-9])+/([a-z0-9]+))$ index.php?loc=clients_$3&clientid=$2 [QSA]
 

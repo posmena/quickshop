@@ -12,6 +12,7 @@
 require_once ("../_private/classes/class.config.php");
 require_once ("../_private/classes/class.template.php");
 require_once ("../_private/classes/class.quickshopbase.php");
+require_once ("../_private/classes/class.sitemap.php");
 
 
 

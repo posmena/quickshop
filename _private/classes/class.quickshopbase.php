@@ -82,6 +82,27 @@ class quickshop extends config
 
 		if (true === isset($this->qs['action'])) {
 			switch ($this->qs['action']) {
+				case 'sitemap':
+				{
+					$sm = new sitemap;
+
+					foreach ($this->slugs as $slug => $vals) {
+						$sm->addItem($this->domain . '/' . $slug . '.html');
+					}
+
+					foreach ($this->categories as $cid => $category) {
+						$cid .= '';
+						$products = $collection->find(array('CategoryID' => $cid));
+						//$products = $collection->find()->limit(1);
+
+						foreach($products as $key => $product) {
+							$sm->addItem($this->domain . '/' . $this->slugify($product['Name']) . '/' . $product['ProductID'] . '.html');
+						}
+					}
+
+					print $sm->getSitemap();
+					exit;
+				}
 				case 'productpresentation':
 				{
 					$this->template = 'product.tpl.html';
