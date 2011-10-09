@@ -9,9 +9,13 @@
 <div class="category clearfix">
 {foreach from=$products item="product"}
 <div class="product">
-	<a href="{$domain}/{$product.slug}/{$product.ProductID}.html">{$product.Name}</a>
 	<img src="{$product.SmallImage}" />
 	<br />
+	<a href="{$domain}/{$product.slug}/{$product.ProductID}.html">{$product.Name}</a>
+	<br />
+	<br />
+	{$product.DropshipPrice}
+	<br /><br />
 	<a href="{$domain}/cart/add/{$product.ProductID}">Add To Cart</a><br />
 </div>
 {/foreach}
