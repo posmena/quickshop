@@ -100,6 +100,7 @@ class quickshop extends config
 						}
 					}
 
+					header('Content-Type: text/xml');
 					print $sm->getSitemap();
 					exit;
 				}
