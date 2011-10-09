@@ -25,7 +25,7 @@ class config
 									  512 => 'Electronic Dictionaries',
 									  513 => 'Electronic Encyclopedia',
 									  519 => 'Electronic Thesaurus');
-
+				$this->homecat = '512';
 				$this->menu = array("Electronic Dictionaries", "About", "Contact Us", "Delivery & Returns", "Why Buy From Us");
 				break;
 

@@ -223,6 +223,21 @@ class quickshop extends config
 					}
 				}
 			}
+		} else {
+			// home
+			if (isset($this->homecat)) {
+				
+				$products = $collection->find(array('CategoryID' => $this->homecat));
+						//$products = $collection->find()->limit(1);
+
+				foreach($products as $key => $product) {
+					$newProducts[$key] = $product;
+					$newProducts[$key]['slug'] = $this->slugify($product['Name']);
+				}
+				
+				$this->products = $newProducts;
+				
+			}
 		}
 	}
 
@@ -238,6 +253,7 @@ class quickshop extends config
 		$this->tplBase->assign('products', $this->products);
 		$this->tplBase->assign('product', $this->product);
 		$this->tplBase->assign('categoryid', $this->categoryid);
+		$this->tplBase->assign('homecat', $this->homecat);
 		$this->tplBase->assign('cart', $this->cart);
 		$this->tplBase->assign('categoryTop', $this->categoryTop);
 		$this->tplBase->assign('categoryBottom', $this->categoryBottom);

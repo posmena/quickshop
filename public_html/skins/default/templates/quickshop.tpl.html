@@ -47,8 +47,10 @@
 			<div class="group">
 				<span class="heading">Categories</span>
 				<ul>
-					{foreach from=$categories item="category"}
-					<li><a href="{$domain}/{$category.slug}.html">{$category.text}</a></li>
+					{foreach from=$categories key="catid" item="category"}
+						{if $catid != $homecat}
+						<li><a href="{$domain}/{$category.slug}.html">{$category.text}</a></li>
+						{/if}
 					{/foreach}
 				</ul>
 			</div>
