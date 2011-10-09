@@ -49,7 +49,7 @@ $x = 0;
 $conn = new Mongo('localhost');
 $mdb = $conn->quickshop;
 $collection = $mdb->atsproducts;
-$collection->drop();
+//$collection->drop();
 $collection->ensureIndex(array('DropshipPrice' =>  1));
 $collection->ensureIndex(array('CategoryID' =>  1));
 $collection->ensureIndex(array('ProductID' =>  1));
@@ -76,7 +76,7 @@ while ($reader->read())
 				}
 
 				$product->DropshipPrice = ceil($product->DropshipPrice * 1.20) + 0.97;
-			
+				$product->_id = $product->ProductID;
 				$collection->save($product);
 				$i++;
 
