@@ -1,15 +1,14 @@
+<h2>{$currentcat.text}</h2>
 
 {if $categoryTop != ''}
 <div class="category_header">
 	{include file=$categoryTop}
 </div>
 {/if}
-
-
 <div class="category clearfix">
 {foreach from=$products item="product"}
 <div class="product">
-	<img src="{$product.SmallImage}" />
+	<a href="{$domain}/{$product.slug}/{$product.ProductID}.html"><img src="{$product.SmallImage}" /></a>
 	<br />
 	<a href="{$domain}/{$product.slug}/{$product.ProductID}.html">{$product.Name}</a>
 	<br />

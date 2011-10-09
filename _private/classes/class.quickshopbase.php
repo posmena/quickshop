@@ -17,6 +17,7 @@ class quickshop extends config
 	private $categoryid;
 	private $categoryTop;
 	private $categoryBottom;
+	private $currentcat;
 	public $domain;
 
 	public function __construct()
@@ -190,7 +191,7 @@ class quickshop extends config
 						$catId = $this->page['id'];
 						$this->categoryid = $catId;
 						// get products
-
+						$this->currentcat = $this->categories[$catId];
 						
 							
 						$catId = $catId . '';
@@ -249,6 +250,7 @@ class quickshop extends config
 		$this->tplBase->assign('domain', $this->domain);
 		$this->tplBase->assign('current_url', '');
 		$this->tplBase->assign('categories', $this->categories);
+		$this->tplBase->assign('currentcat', $this->currentcat);
 		$this->tplBase->assign('pages', $this->pages);
 		$this->tplBase->assign('products', $this->products);
 		$this->tplBase->assign('product', $this->product);
