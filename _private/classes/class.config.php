@@ -17,7 +17,7 @@ class config
 			case 1:
 			{
 				$this->theme = 'default';
-				$this->domain = 'http://electronicdictionary.org.uk';
+				$this->domain = 'http://' . $_SERVER['HTTP_HOST'];
 				//$this->domain = 'http://test.electronicdictionaries.co.uk';
 				$this->name = 'Electronic Dictionaries';
 				$this->title = 'The Electronic Dictionary Shop | Electronic Dictionaries - Free Delivery';
