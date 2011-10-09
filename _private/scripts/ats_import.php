@@ -74,6 +74,8 @@ while ($reader->read())
 					//print "This product does not have a description\n";
 					$x++;
 				}
+
+				$product->DropshipPrice = ceil($product->DropshipPrice * 1.20) + 0.97;
 			
 				$collection->save($product);
 				$i++;
